@@ -1,3 +1,4 @@
+var home =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -49,6 +50,8 @@
 	let welcome = __webpack_require__(1);
 
 	welcome('home');
+
+	exports.welcome = welcome;
 
 /***/ },
 /* 1 */

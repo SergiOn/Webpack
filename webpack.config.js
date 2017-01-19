@@ -3,6 +3,7 @@
 module.exports = {
     entry: "./home.js",
     output: {
-        filename: "build.js"
+        filename: "build.js",
+        library: "home"
     }
 };
