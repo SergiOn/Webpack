@@ -1,1 +1,4 @@
 .idea/
+build.js
+build.js.map
+node_modules/
