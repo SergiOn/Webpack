@@ -1,4 +1,4 @@
 .idea/
-build.js
-public/build.js.map
+public/*.js
+public/*.js.map
 node_modules/

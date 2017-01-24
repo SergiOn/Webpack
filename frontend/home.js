@@ -1,6 +1,6 @@
 'use strict';
 
-import welcome from './welkome';
+import welcome from './welcome';
 
 welcome('home');
 
