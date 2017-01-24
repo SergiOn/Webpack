@@ -4,7 +4,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
 module.exports = {
-    context: __dirname + '/frontend',
+    context: __dirname + '\\frontend',
     entry: {
         home: "./home.js",
         about: "./about.js"
