@@ -7,8 +7,7 @@ module.exports = {
     context: __dirname + '\\frontend',
     entry: {
         home: "./home.js",
-        about: "./about.js",
-        welcome: "./welcome.js"
+        about: "./about.js"
     },
     output: {
         path: __dirname + '/public',
@@ -22,13 +21,16 @@ module.exports = {
         aggregateTimeout: 100
     },
 
-    devtool: NODE_ENV == 'development' ? "source-map" : null,
+    devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
 
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV),
             LANG:     JSON.stringify('ru')
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
         })
     ],
 
