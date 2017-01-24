@@ -7,10 +7,11 @@ module.exports = {
     context: __dirname + '\\frontend',
     entry: {
         home: "./home.js",
-        about: "./about.js"
+        about: "./about.js",
+        common: "./common.js"
     },
     output: {
-        path: __dirname + '/public',
+        path: 'public',
         filename: "[name].js",
         library: "[name]"
     },
@@ -31,12 +32,6 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
-            chunks: ['about', 'home']
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common-goods',
-            minChunks: 2,
-            chunks: ['shop', 'order']
         })
     ],
 
