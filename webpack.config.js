@@ -6,9 +6,9 @@ const webpack = require('webpack');
 module.exports = {
     context: __dirname + '\\frontend',
     entry: {
-        home: "./home.js",
-        about: "./about.js",
-        common: "./common.js"
+        home: "./home",
+        about: "./about",
+        common: ["./common", "./welcome"]
     },
     output: {
         path: 'public',
