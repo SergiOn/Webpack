@@ -8,7 +8,7 @@ module.exports = {
     entry: {
         home: "./home",
         about: "./about",
-        common: ["./common", "./welcome"]
+        common: ["./welcome", "./common"]
     },
     output: {
         path: 'public',
