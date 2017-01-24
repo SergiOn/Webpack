@@ -30,7 +30,13 @@ module.exports = {
             LANG:     JSON.stringify('ru')
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'common'
+            name: 'common',
+            chunks: ['about', 'home']
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common-goods',
+            minChunks: 2,
+            chunks: ['shop', 'order']
         })
     ],
 
