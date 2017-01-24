@@ -20,7 +20,19 @@ module.exports = {
 
     plugins: [
         new webpack.DefinePlugin({
-            NODE_ENV: JSON.stringify(NODE_ENV)
+            NODE_ENV: JSON.stringify(NODE_ENV),
+            LANG:     JSON.stringify('ru')
         })
-    ]
+    ],
+
+    module: {
+
+        loaders: [{
+            test: /\.js$/,
+            loader: 'babel',
+            query: {
+                presets: ['es2015']
+            }
+        }]
+    }
 };

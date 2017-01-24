@@ -1,6 +1,6 @@
 'use strict';
 
-let welcome = require('./welkome');
+import welcome from './welkome';
 
 welcome('home');
 
