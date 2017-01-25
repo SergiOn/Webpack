@@ -3,18 +3,17 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 
-module.exports = [{ }, { }, { }];
 module.exports = {
     context: __dirname + '\\frontend',
+
     entry: {
-        home: "./home",
-        about: "./about",
-        common: ["./welcome", "./common"]
+        app: "./app"
     },
+
     output: {
-        path: 'public',
-        filename: "[name].js",
-        library: "[name]"
+        path: __dirname + '/public',
+        publicPath: "/",
+        filename: "[name].js"
     },
 
     watch: NODE_ENV == 'development',
@@ -26,14 +25,7 @@ module.exports = {
     devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin(),
-        new webpack.DefinePlugin({
-            NODE_ENV: JSON.stringify(NODE_ENV),
-            LANG:     JSON.stringify('ru')
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-        })
+        new webpack.NoErrorsPlugin()
     ],
 
     resolve: {
