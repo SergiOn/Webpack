@@ -29,7 +29,7 @@ module.exports = {
     plugins: [
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
-            template: './public/home.html',
+            template: '.././public/home.html',
             inject: 'body',
             hash: true
         })
