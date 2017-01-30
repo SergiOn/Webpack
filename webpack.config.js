@@ -2,9 +2,11 @@
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    context: __dirname + '\\frontend',
+    context: path.resolve(__dirname, 'frontend'),
 
     entry: {
         app: "./app"
@@ -25,7 +27,12 @@ module.exports = {
     devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new HtmlWebpackPlugin({
+            template: './public/home.html',
+            inject: 'body',
+            hash: true
+        })
     ],
 
     resolve: {
@@ -47,6 +54,9 @@ module.exports = {
             query: {
                 presets: ['es2015']
             }
+        }, {
+            test: /\.html$/,
+            loader: 'raw'
         }]
     }
 };
