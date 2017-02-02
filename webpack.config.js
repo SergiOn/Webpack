@@ -27,12 +27,12 @@ module.exports = {
     devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin(),
-        new HtmlWebpackPlugin({
-            template: '.././public/home.html',
-            inject: 'body',
-            hash: true
-        })
+        new webpack.NoErrorsPlugin()
+        // new HtmlWebpackPlugin({
+        //     template: '.././public/index.html',
+        //     inject: 'body',
+        //     hash: true
+        // })
     ],
 
     resolve: {
