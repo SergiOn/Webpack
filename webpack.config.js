@@ -27,7 +27,7 @@ module.exports = {
     devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
 
     plugins: [
-        new webpack.ContextReplacementPlugin(/node_modules[\\\/]moment[\\\/]locale/, /uk|en-gb/)
+        new webpack.IgnorePlugin(/\.[\\\/]locale/)
     ],
 
     resolve: {
