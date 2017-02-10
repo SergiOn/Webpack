@@ -10,9 +10,5 @@ module.exports = {
         path: __dirname + '/public',
         publicPath: "/",
         filename: "app.js"
-    },
-
-    externals: {
-        lodash: '_'
     }
 };
