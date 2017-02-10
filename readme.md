@@ -14,3 +14,15 @@ http://webpack.github.io/analyse/ <br>
 http://webpack.github.io/docs/list-of-plugins.html <br>
 http://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin <br>
 https://github.com/webpack/webpack/tree/master/examples/multiple-commons-chunks <br>
+
+
+# 05-library-2
+**webpack.ProvidePlugin**
+<pre>
+plugins: [
+    new webpack.ProvidePlugin({
+        map: 'lodash/map',
+        '_': 'lodash'
+    })
+]
+</pre>

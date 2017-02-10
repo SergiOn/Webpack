@@ -1,9 +1,5 @@
 "use strict";
 
-let users = [
-    {id: "abcd", name: "Vasya"},
-    {id: "defa", name: "Petya"},
-    {id: "1234", name: "Masha"}
-];
+import angular from 'angular';
 
-console.log( _.map(users, 'name') );
+console.log(angular.version);
