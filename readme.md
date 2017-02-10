@@ -26,3 +26,9 @@ plugins: [
     })
 ]
 </pre>
+
+# 05-library-2
+**angular with babel** <br>
+<pre>
+webpack --profile --display-modules --display-reasons
+</pre>
