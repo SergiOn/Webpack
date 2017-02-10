@@ -3,7 +3,7 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'frontend'),
@@ -24,11 +24,8 @@ module.exports = {
         aggregateTimeout: 100
     },
 
-    devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : null,
+    devtool: NODE_ENV == 'development' ? "cheap-inline-module-source-map" : false,
 
-    plugins: [
-        new webpack.IgnorePlugin(/\.[\\\/]locale/)
-    ],
 
     resolve: {
         modulesDirectories: ['node_modules'],
