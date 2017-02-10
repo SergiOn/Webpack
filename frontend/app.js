@@ -6,4 +6,4 @@ let users = [
     {id: "1234", name: "Masha"}
 ];
 
-console.log( map(users, 'name') );
+console.log( _.map(users, 'name') );

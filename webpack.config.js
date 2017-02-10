@@ -14,7 +14,8 @@ module.exports = {
 
     plugins: [
         new webpack.ProvidePlugin({
-            map: 'lodash/map'
+            map: 'lodash/map',
+            '_': 'lodash'
         })
     ]
 };
