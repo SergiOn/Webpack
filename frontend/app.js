@@ -1,6 +1,6 @@
 "use strict";
 
-let _ = require('lodash');
+// let _ = require('lodash');
 
 let users = [
     {id: "abcd", name: "Vasya"},
@@ -8,4 +8,4 @@ let users = [
     {id: "1234", name: "Masha"}
 ];
 
-console.log( _.pluck(users, 'name') );
+console.log( _.map(users, 'name') );

@@ -42,11 +42,11 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	"use strict";
 
-	let _ = __webpack_require__(1);
+	// let _ = require('lodash');
 
 	let users = [
 	    {id: "abcd", name: "Vasya"},
@@ -54,13 +54,7 @@
 	    {id: "1234", name: "Masha"}
 	];
 
-	console.log( _.pluck(users, 'name') );
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-	module.exports = _;
+	console.log( _.map(users, 'name') );
 
 /***/ }
 /******/ ]);

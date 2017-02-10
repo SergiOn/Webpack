@@ -12,7 +12,7 @@ module.exports = {
         filename: "app.js"
     },
 
-    externals: {
-        lodash: '_'
-    }
+    // externals: {
+    //     lodash: '_'
+    // }
 };
