@@ -32,3 +32,7 @@ plugins: [
 <pre>
 webpack --profile --display-modules --display-reasons
 </pre>
+**angular with babel. add noParse** <br>
+<pre>
+noParse: /angular[\\/]angular\.js/
+</pre>

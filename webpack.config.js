@@ -17,6 +17,8 @@ module.exports = {
             test: /\.js$/,
             loader: 'babel',
             exclude: /node_modules/
-        }]
+        }],
+
+        noParse: /angular[\\/]angular\.js/
     }
 };
