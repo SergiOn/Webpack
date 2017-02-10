@@ -10,5 +10,11 @@ module.exports = {
         path: __dirname + '/public',
         publicPath: "/",
         filename: "app.js"
-    }
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            map: 'lodash/map'
+        })
+    ]
 };

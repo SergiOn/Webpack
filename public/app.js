@@ -44,9 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	let map = __webpack_require__(1);
+	/* WEBPACK VAR INJECTION */(function(map) {"use strict";
 
 	let users = [
 	    {id: "abcd", name: "Vasya"},
@@ -55,6 +53,7 @@
 	];
 
 	console.log( map(users, 'name') );
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
 /* 1 */

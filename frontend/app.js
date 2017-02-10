@@ -1,7 +1,5 @@
 "use strict";
 
-let map = require('lodash/map');
-
 let users = [
     {id: "abcd", name: "Vasya"},
     {id: "defa", name: "Petya"},
