@@ -1,4 +1,4 @@
 "use strict";
 
-let old = required('old/dist/old');
+let old = require('old/dist/old');
 old();

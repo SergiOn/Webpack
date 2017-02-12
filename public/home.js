@@ -42,12 +42,22 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	let old = required('old/dist/old');
+	let old = __webpack_require__(1);
 	old();
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	function Work() {
+	    setTimeout(function () {
+	        alert('work complete!');
+	    }, workSettings.delay);
+	}
 
 /***/ }
 /******/ ]);
