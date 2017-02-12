@@ -1,24 +1,11 @@
 'use strict';
 
-const webpack = require('webpack');
-
 module.exports = {
     context:  __dirname + '/frontend',
-    entry: "./app",
+    entry: "./home",
 
     output: {
         path: __dirname + '/public',
-        filename: "app.js"
-    },
-
-    module: {
-
-        loaders: [{
-            test: /\.js$/,
-            loader: 'babel',
-            exclude: /node_modules/
-        }],
-
-        noParse: /angular[\\/]angular\.js/
+        filename: "home.js"
     }
 };
