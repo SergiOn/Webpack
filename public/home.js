@@ -53,11 +53,18 @@
 /* 1 */
 /***/ function(module, exports) {
 
+	/*** IMPORTS FROM imports-loader ***/
+	var workSettings = {delay:500};
+
 	function Work() {
 	    setTimeout(function () {
 	        alert('work complete!');
 	    }, workSettings.delay);
 	}
+
+	/*** EXPORTS FROM exports-loader ***/
+	module.exports = Work;
+
 
 /***/ }
 /******/ ]);
