@@ -1,4 +1,4 @@
 "use strict";
 
-let old = required('../vendor/old/dist/old');
+let old = required('old/dist/old');
 old();

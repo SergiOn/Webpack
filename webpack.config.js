@@ -7,5 +7,9 @@ module.exports = {
     output: {
         path: __dirname + '/public',
         filename: "home.js"
+    },
+
+    resolve: {
+        root: __dirname + '/vendor'
     }
 };
