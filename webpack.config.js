@@ -12,7 +12,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /old.js$/,
-            loader: "expose?Work!imports?workSettings=>{delay:500}!exports?Work"
+            loader: "script"
         }]
     },
 

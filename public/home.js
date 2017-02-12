@@ -53,25 +53,29 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Work"] = __webpack_require__(2);
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+	__webpack_require__(2)(__webpack_require__(3))
 
 /***/ },
 /* 2 */
 /***/ function(module, exports) {
 
-	/*** IMPORTS FROM imports-loader ***/
-	var workSettings = {delay:500};
-
-	function Work() {
-	    setTimeout(function () {
-	        alert('work complete!');
-	    }, workSettings.delay);
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	module.exports = function(src) {
+		if (typeof execScript !== "undefined")
+			execScript(src);
+		else
+			eval.call(null, src);
 	}
 
-	/*** EXPORTS FROM exports-loader ***/
-	module.exports = Work;
 
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = "function Work() {\r\n    setTimeout(function () {\r\n        alert('work complete!');\r\n    }, workSettings.delay);\r\n}"
 
 /***/ }
 /******/ ]);
