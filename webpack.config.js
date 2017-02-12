@@ -9,6 +9,13 @@ module.exports = {
         filename: "home.js"
     },
 
+    module: {
+        loaders: [{
+            test: /old.js$/,
+            loader: "imports?workSettings=>{delay:500}!exports?Work"
+        }]
+    },
+
     resolve: {
         root: __dirname + '/vendor',
         alias: {
