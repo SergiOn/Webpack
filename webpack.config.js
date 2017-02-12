@@ -10,6 +10,9 @@ module.exports = {
     },
 
     resolve: {
-        root: __dirname + '/vendor'
+        root: __dirname + '/vendor',
+        alias: {
+            old: 'old/dist/old'
+        }
     }
 };
