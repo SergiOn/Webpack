@@ -1,6 +1,6 @@
 'use strict';
 
-import './menu.css';
+import './menu.styl';
 
 import minus from './minus.svg';
 
@@ -9,7 +9,6 @@ img.src = minus;
 document.body.appendChild(img);
 
 import template from './menu.jade';
-// import template from './menu.jade';
 
 export default class Menu {
     constructor(options) {

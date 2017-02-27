@@ -21,7 +21,10 @@ module.exports = {
             loader: "jade"
         }, {
             test: /\.css$/,
-            loader: "style!css!autoprefixer?browsers=last 2 version!"
+            loader: "style!css!autoprefixer?browsers=last 2 version"
+        }, {
+            test: /\.styl$/,
+            loader: "style!css!autoprefixer?browsers=last 2 version!stylus"
         }, {
             test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
             loader: "url?name=[path][name].[ext]&limit=4096"

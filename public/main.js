@@ -136,8 +136,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/autoprefixer-loader/index.js?browsers=last 2 version!!./menu.css", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/autoprefixer-loader/index.js?browsers=last 2 version!!./menu.css");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/autoprefixer-loader/index.js?browsers=last 2 version!../../node_modules/stylus-loader/index.js!./menu.styl", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/autoprefixer-loader/index.js?browsers=last 2 version!../../node_modules/stylus-loader/index.js!./menu.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -155,7 +155,7 @@
 	exports.i(__webpack_require__(5), "");
 
 	// module
-	exports.push([module.id, ".menu .title {\r\n  padding: 0 6px 0 16px;\r\n\r\n  background: url(" + __webpack_require__(516) + ") left 1px no-repeat;\r\n  background-size: 14px;\r\n\r\n  font-weight: bold;\r\n  cursor: pointer;\r\n}\r\n\r\n.menu .list {\r\n  display: none;\r\n  margin: 0;\r\n}\r\n\r\n.menu .list a {\r\n  color: blue;\r\n}\r\n\r\n.menu.open .list {\r\n  display: block;\r\n}\r\n\r\n.menu.open .title {\r\n  background-image: url(" + __webpack_require__(517) + ");\r\n}", ""]);
+	exports.push([module.id, ".menu .list {\n  display: none;\n  margin: 0;\n}\n.menu .title {\n  font-weight: bold;\n  cursor: pointer;\n  background: url(" + __webpack_require__(516) + ") left 1px no-repeat;\n  background-size: 14px;\n  padding-right: 6px;\n  padding-left: 16px;\n}\n.menu.open .list {\n  display: block;\n}\n.menu.open .title:before {\n  background-image: url(" + __webpack_require__(517) + ");\n}\n", ""]);
 
 	// exports
 
