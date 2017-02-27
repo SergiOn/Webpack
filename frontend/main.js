@@ -1,7 +1,5 @@
 'use strict';
 
-require('./styles/index.styl');
-
 require.ensure([], function (require) {
     let Menu = require('./menu');
 

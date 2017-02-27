@@ -5,7 +5,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     context:  path.resolve(__dirname, "frontend"),
-    entry: "./main",
+    entry: {
+        main: './main',
+        styles: './styles/index.styl'
+    },
 
     output: {
         path: __dirname + "/public",
