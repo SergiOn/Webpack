@@ -1,13 +1,5 @@
 'use strict';
 
-import '../styles/menu.styl';
-
-import minus from '../styles/pics/minus.svg';
-
-let img = document.createElement('img');
-img.src = minus;
-document.body.appendChild(img);
-
 import template from './menu.jade';
 
 export default class Menu {

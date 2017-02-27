@@ -7,12 +7,16 @@ module.exports = {
     context:  path.resolve(__dirname, "frontend"),
     entry: {
         main: './main',
-        styles: './styles/index.styl'
+        styles: './styles'
     },
 
     output: {
         path: __dirname + "/public",
         filename: "[name].js"
+    },
+
+    resolve: {
+        extensions: ['', '.js', '.styl']
     },
 
     module: {

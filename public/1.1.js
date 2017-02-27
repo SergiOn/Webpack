@@ -13,19 +13,9 @@ webpackJsonp([1],[
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	__webpack_require__(2);
-
-	var _stylesPicsMinusSvg = __webpack_require__(3);
-
-	var _stylesPicsMinusSvg2 = _interopRequireDefault(_stylesPicsMinusSvg);
-
-	var _menuJade = __webpack_require__(4);
+	var _menuJade = __webpack_require__(2);
 
 	var _menuJade2 = _interopRequireDefault(_menuJade);
-
-	var img = document.createElement('img');
-	img.src = _stylesPicsMinusSvg2['default'];
-	document.body.appendChild(img);
 
 	var Menu = function Menu(options) {
 	        var _this = this;
@@ -53,21 +43,9 @@ webpackJsonp([1],[
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHZpZXdCb3g9IjAgMCAzNiAzNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+DQogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjQgKDE1NTg4KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+U2hhcGUgKyBSZWN0YW5nbGUtcGF0aDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPg0KICAgICAgICA8ZyBpZD0iU2hhcGUtKy1SZWN0YW5nbGUtcGF0aCIgc2tldGNoOnR5cGU9Ik1TTGF5ZXJHcm91cCIgZmlsbD0iIzAwMDAwMCI+DQogICAgICAgICAgICA8cGF0aCBkPSJNMTgsMCBDOC4wNTg3MDU4OCwwIC0zLjU1MjcxMzY4ZS0xNSw4LjA1ODcwNTg4IC0zLjU1MjcxMzY4ZS0xNSwxOCBDLTMuNTUyNzEzNjhlLTE1LDI3Ljk0MTI5NDEgOC4wNTg3MDU4OCwzNiAxOCwzNiBDMjcuOTQxMjk0MSwzNiAzNiwyNy45NDEyOTQxIDM2LDE4IEMzNiw4LjA1ODcwNTg4IDI3Ljk0MTI5NDEsMCAxOCwwIEwxOCwwIEwxOCwwIFogTTE4LDMxLjc2NDcwNTkgQzEwLjM5NzY0NzEsMzEuNzY0NzA1OSA0LjIzNTI5NDEyLDI1LjYwMjM1MjkgNC4yMzUyOTQxMiwxOCBDNC4yMzUyOTQxMiwxMC4zOTc2NDcxIDEwLjM5NzY0NzEsNC4yMzUyOTQxMiAxOCw0LjIzNTI5NDEyIEMyNS42MDIzNTI5LDQuMjM1Mjk0MTIgMzEuNzY0NzA1OSwxMC4zOTc2NDcxIDMxLjc2NDcwNTksMTggQzMxLjc2NDcwNTksMjUuNjAyMzUyOSAyNS42MDIzNTI5LDMxLjc2NDcwNTkgMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBaIiBpZD0iU2hhcGUiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4NCiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtcGF0aCIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCIgeD0iMTAiIHk9IjE3IiB3aWR0aD0iMTYiIGhlaWdodD0iMi4wNTcxNDI4NiI+PC9yZWN0Pg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+"
-
-/***/ },
-/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var jade = __webpack_require__(5);
+	var jade = __webpack_require__(3);
 
 	module.exports = function template(locals) {
 	var buf = [];
@@ -101,7 +79,7 @@ webpackJsonp([1],[
 	}
 
 /***/ },
-/* 5 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -317,7 +295,7 @@ webpackJsonp([1],[
 	    throw err;
 	  }
 	  try {
-	    str = str || __webpack_require__(6).readFileSync(filename, 'utf8');
+	    str = str || __webpack_require__(4).readFileSync(filename, 'utf8');
 	  } catch (ex) {
 	    rethrow(err, null, lineno);
 	  }
@@ -344,7 +322,7 @@ webpackJsonp([1],[
 	};
 
 /***/ },
-/* 6 */
+/* 4 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
