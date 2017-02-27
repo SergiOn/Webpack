@@ -24,6 +24,11 @@ module.exports = {
             loader: "style!css!autoprefixer?browsers=last 2 version!"
         }, {
             test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+            include: /node_modules/,
+            loader: "file?name=[1].[ext]&regExp=node_modules\\\\(.*)"
+        }, {
+            test: /\.(png|jpe?g|svg|ttf|eot|woff|woff2)$/,
+            exclude: /node_modules/,
             loader: "file?name=[path][name].[ext]"
         }]
     }

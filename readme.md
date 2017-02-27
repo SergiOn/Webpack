@@ -36,3 +36,13 @@ webpack --profile --display-modules --display-reasons
 <pre>
 noParse: /angular[\\/]angular\.js/
 </pre>
+
+# 06-style-assets-2
+**add regExp to file-loader** <br>
+<pre>
+test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+include: /node_modules/,
+loader: "file?name=[1].[ext]&regExp=node_modules\\\\(.*)"
+or
+loader: "file?name=[1].[ext]&regExp=node_modules/(.*)"
+</pre>
