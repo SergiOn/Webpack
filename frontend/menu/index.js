@@ -1,8 +1,8 @@
 'use strict';
 
-import './menu.styl';
+import '../styles/menu.styl';
 
-import minus from '../pics/minus.svg';
+import minus from '../styles/pics/minus.svg';
 
 let img = document.createElement('img');
 img.src = minus;

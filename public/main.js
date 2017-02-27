@@ -97,8 +97,10 @@
 
 	'use strict';
 
+	__webpack_require__(1);
+
 	__webpack_require__.e/* nsure */(1, function (require) {
-	    var Menu = __webpack_require__(1);
+	    var Menu = __webpack_require__(2);
 
 	    var pandaMenu = new Menu({
 	        title: "Меню панды",
@@ -116,6 +118,12 @@
 
 	    document.body.appendChild(pandaMenu.elem);
 	});
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

@@ -1,9 +1,9 @@
-@import url("~flag-icon-css/css/flag-icon.css");
+@import url("../../node_modules/flag-icon-css/css/flag-icon.css");
 
 .menu .title {
   padding: 0 6px 0 16px;
 
-  background: url(../pics/plus.svg) left 1px no-repeat;
+  background: url(pics/plus.svg) left 1px no-repeat;
   background-size: 14px;
 
   font-weight: bold;
@@ -24,5 +24,5 @@
 }
 
 .menu.open .title {
-  background-image: url(../pics/minus.svg);
+  background-image: url(pics/minus.svg);
 }
