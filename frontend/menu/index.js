@@ -2,7 +2,7 @@
 
 import './menu.styl';
 
-import minus from './minus.svg';
+import minus from '../pics/minus.svg';
 
 let img = document.createElement('img');
 img.src = minus;

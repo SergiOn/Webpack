@@ -84,16 +84,16 @@
 
 	__webpack_require__(2);
 
-	var _minusSvg = __webpack_require__(517);
+	var _picsMinusSvg = __webpack_require__(517);
 
-	var _minusSvg2 = _interopRequireDefault(_minusSvg);
+	var _picsMinusSvg2 = _interopRequireDefault(_picsMinusSvg);
 
-	var _menuJade = __webpack_require__(519);
+	var _menuJade = __webpack_require__(518);
 
 	var _menuJade2 = _interopRequireDefault(_menuJade);
 
 	var img = document.createElement('img');
-	img.src = _minusSvg2['default'];
+	img.src = _picsMinusSvg2['default'];
 	document.body.appendChild(img);
 
 	var Menu = function Menu(options) {
@@ -130,7 +130,7 @@
 	var content = __webpack_require__(3);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(518)(content, {});
+	var update = __webpack_require__(516)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -155,7 +155,7 @@
 	exports.i(__webpack_require__(5), "");
 
 	// module
-	exports.push([module.id, ".menu .list {\n  display: none;\n  margin: 0;\n}\n.menu .title {\n  font-weight: bold;\n  cursor: pointer;\n  background: url(" + __webpack_require__(516) + ") left 1px no-repeat;\n  background-size: 14px;\n  padding-right: 6px;\n  padding-left: 16px;\n}\n.menu.open .list {\n  display: block;\n}\n.menu.open .title:before {\n  background-image: url(" + __webpack_require__(517) + ");\n}\n", ""]);
+	exports.push([module.id, ".minus,\n.menu.open .title {\n  background-image: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./minus.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ");\n}\n.plus,\n.menu .title {\n  background-image: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./plus.svg\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ");\n}\n.menu .title {\n  padding: 0 6px 0 16px;\n  background-position: left 1px;\n  background-repeat: no-repeat;\n  background-size: 14px;\n  font-weight: bold;\n  cursor: pointer;\n}\n.menu .list {\n  display: none;\n  margin: 0;\n}\n.menu .list a {\n  color: #00f;\n}\n.menu.open .list {\n  display: block;\n}\n", ""]);
 
 	// exports
 
@@ -3291,18 +3291,6 @@
 
 /***/ },
 /* 516 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHZpZXdCb3g9IjAgMCAzNiAzNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+DQogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjQgKDE1NTg4KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+VW50aXRsZWQgNDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPg0KICAgICAgICA8cGF0aCBkPSJNMTgsMCBDOC4wNTg3MDU4OCwwIDAsOC4wNTg3MDU4OCAwLDE4IEMwLDI3Ljk0MTI5NDEgOC4wNTg3MDU4OCwzNiAxOCwzNiBDMjcuOTQxMjk0MSwzNiAzNiwyNy45NDEyOTQxIDM2LDE4IEMzNiw4LjA1ODcwNTg4IDI3Ljk0MTI5NDEsMCAxOCwwIEwxOCwwIEwxOCwwIFogTTE4LDMxLjc2NDcwNTkgQzEwLjM5NzY0NzEsMzEuNzY0NzA1OSA0LjIzNTI5NDEyLDI1LjYwMjM1MjkgNC4yMzUyOTQxMiwxOCBDNC4yMzUyOTQxMiwxMC4zOTc2NDcxIDEwLjM5NzY0NzEsNC4yMzUyOTQxMiAxOCw0LjIzNTI5NDEyIEMyNS42MDIzNTI5LDQuMjM1Mjk0MTIgMzEuNzY0NzA1OSwxMC4zOTc2NDcxIDMxLjc2NDcwNTksMTggQzMxLjc2NDcwNTksMjUuNjAyMzUyOSAyNS42MDIzNTI5LDMxLjc2NDcwNTkgMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBaIiBpZD0iU2hhcGUiIGZpbGw9IiMwMDAwMDAiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4NCiAgICAgICAgPHBhdGggZD0iTTE5LDEwIEwxNywxMCBMMTcsMTcgTDEwLDE3IEwxMCwxOSBMMTcsMTkgTDE3LDI2IEwxOSwyNiBMMTksMTkgTDI2LDE5IEwyNiwxNyBMMTksMTcgTDE5LDEwIEwxOSwxMCBaIiBpZD0iU2hhcGUiIGZpbGw9IiMwMDAwMDAiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4NCiAgICA8L2c+DQo8L3N2Zz4="
-
-/***/ },
-/* 517 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHZpZXdCb3g9IjAgMCAzNiAzNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+DQogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjQgKDE1NTg4KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+U2hhcGUgKyBSZWN0YW5nbGUtcGF0aDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPg0KICAgICAgICA8ZyBpZD0iU2hhcGUtKy1SZWN0YW5nbGUtcGF0aCIgc2tldGNoOnR5cGU9Ik1TTGF5ZXJHcm91cCIgZmlsbD0iIzAwMDAwMCI+DQogICAgICAgICAgICA8cGF0aCBkPSJNMTgsMCBDOC4wNTg3MDU4OCwwIC0zLjU1MjcxMzY4ZS0xNSw4LjA1ODcwNTg4IC0zLjU1MjcxMzY4ZS0xNSwxOCBDLTMuNTUyNzEzNjhlLTE1LDI3Ljk0MTI5NDEgOC4wNTg3MDU4OCwzNiAxOCwzNiBDMjcuOTQxMjk0MSwzNiAzNiwyNy45NDEyOTQxIDM2LDE4IEMzNiw4LjA1ODcwNTg4IDI3Ljk0MTI5NDEsMCAxOCwwIEwxOCwwIEwxOCwwIFogTTE4LDMxLjc2NDcwNTkgQzEwLjM5NzY0NzEsMzEuNzY0NzA1OSA0LjIzNTI5NDEyLDI1LjYwMjM1MjkgNC4yMzUyOTQxMiwxOCBDNC4yMzUyOTQxMiwxMC4zOTc2NDcxIDEwLjM5NzY0NzEsNC4yMzUyOTQxMiAxOCw0LjIzNTI5NDEyIEMyNS42MDIzNTI5LDQuMjM1Mjk0MTIgMzEuNzY0NzA1OSwxMC4zOTc2NDcxIDMxLjc2NDcwNTksMTggQzMxLjc2NDcwNTksMjUuNjAyMzUyOSAyNS42MDIzNTI5LDMxLjc2NDcwNTkgMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBaIiBpZD0iU2hhcGUiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4NCiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtcGF0aCIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCIgeD0iMTAiIHk9IjE3IiB3aWR0aD0iMTYiIGhlaWdodD0iMi4wNTcxNDI4NiI+PC9yZWN0Pg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+"
-
-/***/ },
-/* 518 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -3554,10 +3542,16 @@
 
 
 /***/ },
-/* 519 */
+/* 517 */
+/***/ function(module, exports) {
+
+	module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHZpZXdCb3g9IjAgMCAzNiAzNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+DQogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjQgKDE1NTg4KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+U2hhcGUgKyBSZWN0YW5nbGUtcGF0aDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPg0KICAgICAgICA8ZyBpZD0iU2hhcGUtKy1SZWN0YW5nbGUtcGF0aCIgc2tldGNoOnR5cGU9Ik1TTGF5ZXJHcm91cCIgZmlsbD0iIzAwMDAwMCI+DQogICAgICAgICAgICA8cGF0aCBkPSJNMTgsMCBDOC4wNTg3MDU4OCwwIC0zLjU1MjcxMzY4ZS0xNSw4LjA1ODcwNTg4IC0zLjU1MjcxMzY4ZS0xNSwxOCBDLTMuNTUyNzEzNjhlLTE1LDI3Ljk0MTI5NDEgOC4wNTg3MDU4OCwzNiAxOCwzNiBDMjcuOTQxMjk0MSwzNiAzNiwyNy45NDEyOTQxIDM2LDE4IEMzNiw4LjA1ODcwNTg4IDI3Ljk0MTI5NDEsMCAxOCwwIEwxOCwwIEwxOCwwIFogTTE4LDMxLjc2NDcwNTkgQzEwLjM5NzY0NzEsMzEuNzY0NzA1OSA0LjIzNTI5NDEyLDI1LjYwMjM1MjkgNC4yMzUyOTQxMiwxOCBDNC4yMzUyOTQxMiwxMC4zOTc2NDcxIDEwLjM5NzY0NzEsNC4yMzUyOTQxMiAxOCw0LjIzNTI5NDEyIEMyNS42MDIzNTI5LDQuMjM1Mjk0MTIgMzEuNzY0NzA1OSwxMC4zOTc2NDcxIDMxLjc2NDcwNTksMTggQzMxLjc2NDcwNTksMjUuNjAyMzUyOSAyNS42MDIzNTI5LDMxLjc2NDcwNTkgMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBMMTgsMzEuNzY0NzA1OSBaIiBpZD0iU2hhcGUiIHNrZXRjaDp0eXBlPSJNU1NoYXBlR3JvdXAiPjwvcGF0aD4NCiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtcGF0aCIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCIgeD0iMTAiIHk9IjE3IiB3aWR0aD0iMTYiIGhlaWdodD0iMi4wNTcxNDI4NiI+PC9yZWN0Pg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+"
+
+/***/ },
+/* 518 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var jade = __webpack_require__(520);
+	var jade = __webpack_require__(519);
 
 	module.exports = function template(locals) {
 	var buf = [];
@@ -3591,7 +3585,7 @@
 	}
 
 /***/ },
-/* 520 */
+/* 519 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3807,7 +3801,7 @@
 	    throw err;
 	  }
 	  try {
-	    str = str || __webpack_require__(521).readFileSync(filename, 'utf8');
+	    str = str || __webpack_require__(520).readFileSync(filename, 'utf8');
 	  } catch (ex) {
 	    rethrow(err, null, lineno);
 	  }
@@ -3834,7 +3828,7 @@
 	};
 
 /***/ },
-/* 521 */
+/* 520 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
