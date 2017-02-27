@@ -24,7 +24,7 @@ module.exports = {
             loader: "style!css!autoprefixer?browsers=last 2 version"
         }, {
             test: /\.styl$/,
-            loader: "style!css!autoprefixer?browsers=last 2 version!stylus"
+            loader: "style!css!autoprefixer?browsers=last 2 version!stylus?resolve url"
         }, {
             test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
             loader: "url?name=[path][name].[ext]&limit=4096"
