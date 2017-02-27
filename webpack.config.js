@@ -21,8 +21,7 @@ module.exports = {
             loader: "jade"
         }, {
             test: /\.css$/,
-            loader: "style!css"
-            // !autoprefixer?browsers=last 2 version!
+            loader: "style!css!autoprefixer?browsers=last 2 version!"
         }, {
             test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
             loader: "file?name=[path][name].[ext]"

@@ -1,18 +1,18 @@
-"use strict";
+'use strict';
 
 import Menu from './menu';
 
 let pandaMenu = new Menu({
-    title: 'Меню панды',
+    title: "Меню панды",
     items: [{
         text: 'Яйца',
-        href: '#eggs',
+        href: '#eggs'
     }, {
         text: 'Мясо',
-        href: '#meat',
+        href: '#meat'
     }, {
         text: '99% еды - бамбук!',
-        href: '#bamboo',
+        href: '#bamboo'
     }]
 });
 

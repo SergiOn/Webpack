@@ -2,6 +2,12 @@
 
 import './menu.css';
 
+import minus from './minus.svg';
+
+let img = document.createElement('img');
+img.src = minus;
+document.body.appendChild(img);
+
 import template from './menu.jade';
 
 export default class Menu {
@@ -11,8 +17,10 @@ export default class Menu {
 
         this.elem.innerHTML = template(options);
 
-        this.elem.querySelector('.title').onclick = () => {
-            this.elem.classList.toggle('open');
-        };
+        this.titleElem = this.elem.querySelector('.title');
+
+        this.titleElem.onclick = () => this.elem.classList.toggle('open');
+
+        this.titleElem.onmousedown = () => false;
     }
 }
