@@ -1,6 +1,7 @@
 'use strict';
 
-var path = require('path');
+const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     context:  path.resolve(__dirname, "frontend"),
@@ -24,10 +25,14 @@ module.exports = {
             loader: "style!css!autoprefixer?browsers=last 2 version"
         }, {
             test: /\.styl$/,
-            loader: "style!css!autoprefixer?browsers=last 2 version!stylus?resolve url"
+            loader: ExtractTextPlugin.extract("style", "css!stylus?resolve url")
         }, {
             test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
             loader: "url?name=[path][name].[ext]&limit=4096"
         }]
-    }
+    },
+
+    plugins: [
+        new ExtractTextPlugin('style.css')
+    ]
 };
