@@ -11,7 +11,7 @@ const rimraf = require('rimraf');
 
 function addHash(template, hash) {
     return NODE_ENV == 'production' ?
-        template.replace(/\.[^.]+$/, `.[${hash}]$&`) : template;
+        template.replace(/\.[^.]+$/, `.[${hash}]$&`) : `${template}?hash=[${hash}]`;
 }
 
 module.exports = {
