@@ -1,14 +1,16 @@
 'use strict';
 
+let path = require('path');
+
 module.exports = {
-  context: __dirname + '/frontend',
+  context: path.resolve(__dirname, 'frontend'),
 
   entry: {
     main: './main'
   },
 
   output: {
-    path:       __dirname + '/public',
+    path:       path.resolve(__dirname, 'public'),
     publicPath: '/',
     filename:   '[name].js'
   },
@@ -17,7 +19,7 @@ module.exports = {
 
     loaders: [{
       test:    /\.js$/,
-      include: __dirname + '/frontend',
+      include: path.resolve(__dirname, 'frontend'),
       loader:  "babel?presets[]=es2015"
     }, {
       test:   /\.jade$/,
@@ -33,7 +35,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: __dirname + '/backend',
+    contentBase: path.resolve(__dirname, 'backend'),
     hot: true
   }
 };
