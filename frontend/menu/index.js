@@ -2,6 +2,8 @@
 
 import template from './menu.jade';
 
+require('./menu.styl');
+
 export default class Menu {
     constructor(options) {
         this.elem = document.createElement('div');

@@ -1,21 +1,23 @@
-webpackJsonp([1],[
+webpackJsonp_name_([1],[
 /* 0 */,
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
+	Object.defineProperty(exports, "__esModule", {
 	        value: true
 	});
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _menu = __webpack_require__(2);
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	var _menu2 = _interopRequireDefault(_menu);
 
-	var _menuJade = __webpack_require__(2);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _menuJade2 = _interopRequireDefault(_menuJade);
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	__webpack_require__(5);
 
 	var Menu = function Menu(options) {
 	        var _this = this;
@@ -25,7 +27,7 @@ webpackJsonp([1],[
 	        this.elem = document.createElement('div');
 	        this.elem.className = 'menu';
 
-	        this.elem.innerHTML = (0, _menuJade2['default'])(options);
+	        this.elem.innerHTML = (0, _menu2.default)(options);
 
 	        this.titleElem = this.elem.querySelector('.title');
 
@@ -38,8 +40,7 @@ webpackJsonp([1],[
 	        };
 	};
 
-	exports['default'] = Menu;
-	module.exports = exports['default'];
+	exports.default = Menu;
 
 /***/ },
 /* 2 */
@@ -61,7 +62,7 @@ webpackJsonp([1],[
 	    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
 	      var item = $$obj[$index];
 
-	buf.push("<li><a" + (jade.attr("href", item.href, true, true)) + ">" + (jade.escape(null == (jade_interp = item.text) ? "" : jade_interp)) + "</a></li>");
+	buf.push("<li><a" + (jade.attr("href", item.href, true, false)) + ">" + (jade.escape(null == (jade_interp = item.text) ? "" : jade_interp)) + "</a></li>");
 	    }
 
 	  } else {
@@ -69,7 +70,7 @@ webpackJsonp([1],[
 	    for (var $index in $$obj) {
 	      $$l++;      var item = $$obj[$index];
 
-	buf.push("<li><a" + (jade.attr("href", item.href, true, true)) + ">" + (jade.escape(null == (jade_interp = item.text) ? "" : jade_interp)) + "</a></li>");
+	buf.push("<li><a" + (jade.attr("href", item.href, true, false)) + ">" + (jade.escape(null == (jade_interp = item.text) ? "" : jade_interp)) + "</a></li>");
 	    }
 
 	  }
@@ -95,6 +96,8 @@ webpackJsonp([1],[
 	 * @return {Object} a
 	 * @api private
 	 */
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 	exports.merge = function merge(a, b) {
 	  if (arguments.length === 1) {
@@ -144,7 +147,7 @@ webpackJsonp([1],[
 	 */
 	exports.joinClasses = joinClasses;
 	function joinClasses(val) {
-	  return (Array.isArray(val) ? val.map(joinClasses) : val && typeof val === 'object' ? Object.keys(val).filter(function (key) {
+	  return (Array.isArray(val) ? val.map(joinClasses) : val && (typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'object' ? Object.keys(val).filter(function (key) {
 	    return val[key];
 	  }) : [val]).filter(nulls).join(' ');
 	}
@@ -174,7 +177,7 @@ webpackJsonp([1],[
 	};
 
 	exports.style = function (val) {
-	  if (val && typeof val === 'object') {
+	  if (val && (typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'object') {
 	    return Object.keys(val).map(function (style) {
 	      return style + ':' + val[style];
 	    }).join(';');
@@ -326,6 +329,12 @@ webpackJsonp([1],[
 /***/ function(module, exports) {
 
 	/* (ignored) */
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 ]);

@@ -1,18 +1,25 @@
 'use strict';
 
 const path = require('path');
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const AssetsPlugin = require('assets-webpack-plugin');
+const rimraf = require('rimraf');
 
 module.exports = {
-    context:  path.resolve(__dirname, "frontend"),
-    entry: {
-        main: './main',
-        styles: './styles'
+    context: path.resolve(__dirname, 'frontend'),
+    entry:   {
+        home:   './home',
+        about:  './about',
+        common: './common'
     },
-
-    output: {
-        path: __dirname + "/public",
-        filename: "[name].js"
+    output:  {
+        path:           path.resolve(__dirname, 'public', 'assets'),
+        publicPath:    '/assets/',
+        filename:      '[name].js',
+        chunkFilename: '[id].js',
+        library:       '[name]'
     },
 
     resolve: {
@@ -22,24 +29,34 @@ module.exports = {
     module: {
 
         loaders: [{
-            test: /\.js$/,
-            loader: "babel"
+            test:   /\.js$/,
+            loader: "babel?presets[]=es2015"
         }, {
-            test: /\.jade$/,
+            test:   /\.jade$/,
             loader: "jade"
         }, {
-            test: /\.css$/,
-            loader: "style!css!autoprefixer?browsers=last 2 version"
+            test:   /\.styl$/,
+            loader: ExtractTextPlugin.extract('css!stylus?resolve url')
         }, {
-            test: /\.styl$/,
-            loader: ExtractTextPlugin.extract("css!stylus?resolve url&linenos")
-        }, {
-            test: /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: "url?name=[path][name].[ext]&limit=4096"
+            test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+            loader: 'file?name=[path][name].[ext]'
         }]
+
     },
 
     plugins: [
-        new ExtractTextPlugin('[name].css', {allChunks: true})
+        {
+            apply: (compiler) => {
+                rimraf.sync(compiler.options.output.path);
+            }
+        },
+        new ExtractTextPlugin('[name].css', {allChunks: true}),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
+        }),
+        // new AssetsPlugin({
+        //     filename: 'assets.json',
+        //     path:     __dirname + '/public/assets'
+        // })
     ]
 };

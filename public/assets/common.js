@@ -1,7 +1,8 @@
+var common =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
-/******/ 	var parentJsonpFunction = window["webpackJsonp"];
-/******/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules) {
+/******/ 	var parentJsonpFunction = window["webpackJsonp_name_"];
+/******/ 	window["webpackJsonp_name_"] = function webpackJsonpCallback(chunkIds, moreModules) {
 /******/ 		// add "moreModules" to the modules object,
 /******/ 		// then flag all "chunkIds" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0, callbacks = [];
@@ -17,7 +18,10 @@
 /******/ 		if(parentJsonpFunction) parentJsonpFunction(chunkIds, moreModules);
 /******/ 		while(callbacks.length)
 /******/ 			callbacks.shift().call(null, __webpack_require__);
-
+/******/ 		if(moreModules[0]) {
+/******/ 			installedModules[0] = 0;
+/******/ 			return __webpack_require__(0);
+/******/ 		}
 /******/ 	};
 
 /******/ 	// The module cache
@@ -27,7 +31,7 @@
 /******/ 	// "0" means "already loaded"
 /******/ 	// Array means "loading", array contains callbacks
 /******/ 	var installedChunks = {
-/******/ 		0:0
+/******/ 		2:0
 /******/ 	};
 
 /******/ 	// The require function
@@ -73,7 +77,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + "." + ({}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -85,7 +89,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/assets/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -93,29 +97,14 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
-
-	__webpack_require__.e/* nsure */(1, function (require) {
-	    var Menu = __webpack_require__(1);
-
-	    var pandaMenu = new Menu({
-	        title: "Меню панды",
-	        items: [{
-	            text: 'Яйца',
-	            href: '#eggs'
-	        }, {
-	            text: 'Мясо',
-	            href: '#meat'
-	        }, {
-	            text: '99% еды - бамбук!',
-	            href: '#bamboo'
-	        }]
-	    });
-
-	    document.body.appendChild(pandaMenu.elem);
-	});
+	/**
+	 * Polyfills
+	 * Basic functions
+	 * Other common stuff
+	 */
+	"use strict";
 
 /***/ }
 /******/ ]);
