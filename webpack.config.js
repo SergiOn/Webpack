@@ -8,6 +8,12 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rimraf = require('rimraf');
 
+
+function addHash(template, hash) {
+    return NODE_ENV == 'production' ?
+        template.replace(/\.[^.]+$/, `.[${hash}]$&`) : template;
+}
+
 module.exports = {
     context: path.resolve(__dirname, 'frontend'),
     entry:   {
@@ -18,8 +24,8 @@ module.exports = {
     output:  {
         path:           path.resolve(__dirname, 'public', 'assets'),
         publicPath:    '/assets/',
-        filename:      '[name].[chunkhash].js',
-        chunkFilename: '[id].[chunkhash].js',
+        filename:      addHash('[name].js', 'chunkhash'),
+        chunkFilename: addHash('[id].js', 'chunkhash'),
         library:       '[name]'
     },
 
@@ -40,7 +46,7 @@ module.exports = {
             loader: ExtractTextPlugin.extract('css!stylus?resolve url')
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: 'file?name=[path][name].[hash:6].[ext]'
+            loader: addHash('file?name=[path][name].[ext]', 'hash:6')
         }]
 
     },
@@ -51,7 +57,7 @@ module.exports = {
                 rimraf.sync(compiler.options.output.path);
             }
         },
-        new ExtractTextPlugin('[name].[contenthash].css', {allChunks: true}),
+        new ExtractTextPlugin(addHash('[name].css', 'contenthash'), {allChunks: true}),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
