@@ -1,17 +1,18 @@
 'use strict';
 
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  context: __dirname + '/frontend',
+  context: path.resolve(__dirname, 'frontend'),
 
   entry: {  // --inline --hot
-    main: './main'
+    main: ['webpack-dev-server/client', 'webpack/hot/dev-server', './main']
   },
 
   output: {
-    path:       __dirname + '/public',
+    path:        path.resolve(__dirname, 'public'),
     publicPath: '/',
     filename:   '[name].js'
   },
@@ -20,14 +21,15 @@ module.exports = {
 
     loaders: [{
       test:    /\.js$/,
-      include: __dirname + '/frontend',
+      include:  path.resolve(__dirname, 'frontend'),
       loader:  "babel?presets[]=es2015"
     }, {
       test:   /\.jade$/,
       loader: "jade"
     }, {
       test:   /\.styl$/,
-      loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
+      // loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
+      loader: 'style!css!stylus?resolve url'
     }, {
       test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
       loader: 'file?name=[path][name].[ext]?[hash]'
@@ -36,11 +38,12 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('[name].css', {allChunks: true, disable: process.env.NODE_ENV=='development'})
+    // new ExtractTextPlugin('[name].css', {allChunks: true, disable: process.env.NODE_ENV=='development'}),
+    new webpack.HotModuleReplacementPlugin()
   ],
 
   devServer: {
-    contentBase: __dirname + '/backend',
+    contentBase:  path.resolve(__dirname, 'backend'),
     hot: true
   }
 };
