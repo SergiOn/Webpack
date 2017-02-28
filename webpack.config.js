@@ -1,16 +1,17 @@
 'use strict';
 
-let webpack = require('webpack');
 let path = require('path');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+// Webpack Dev Server
 module.exports = {
-  context: path.resolve(__dirname, 'frontend'),
+  context: __dirname + '/frontend',
+
   entry:   {
     main: './main'
   },
+
   output:  {
-    path:       __dirname + '/public',
+    path:       path.resolve(__dirname, 'public'),
     publicPath: '/',
     filename:   '[name].js'
   },
@@ -19,7 +20,7 @@ module.exports = {
 
     loaders: [{
       test:   /\.js$/,
-      include: __dirname + '/frontend',
+      include: path.resolve(__dirname, 'frontend'),
       loader: "babel?presets[]=es2015"
     }, {
       test:   /\.jade$/,
@@ -35,11 +36,12 @@ module.exports = {
   },
 
   devServer: {
-
     host: 'localhost', // default
     port: 8080, // default
-    contentBase: __dirname + '/backend',
-
+    proxy: [{
+      path: /.*/,
+      target: 'http://localhost:3000'
+    }]
   }
 };
 
