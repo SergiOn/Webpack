@@ -4,7 +4,8 @@ const path = require('path');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const AssetsPlugin = require('assets-webpack-plugin');
+// const AssetsPlugin = require('assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rimraf = require('rimraf');
 
 module.exports = {
@@ -54,9 +55,17 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
-        new AssetsPlugin({
-            filename: 'assets.json',
-            path:     path.resolve(__dirname, 'public', 'assets')
+        // new AssetsPlugin({
+        //     filename: 'assets.json',
+        //     path:     path.resolve(__dirname, 'public', 'assets')
+        // })
+        new HtmlWebpackPlugin({
+            filename: './about.html',
+            chunks: ['common', 'about']
+        }),
+        new HtmlWebpackPlugin({
+            filename: './home.html',
+            chunks: ['common', 'home']
         })
     ]
 };
