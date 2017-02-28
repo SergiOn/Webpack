@@ -50,7 +50,7 @@ module.exports = {
                 rimraf.sync(compiler.options.output.path);
             }
         },
-        new ExtractTextPlugin('[name].css', {allChunks: true}),
+        new ExtractTextPlugin('[name].[contenthash].css', {allChunks: true}),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
