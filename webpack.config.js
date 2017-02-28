@@ -1,17 +1,17 @@
 'use strict';
 
-let path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-// Webpack Dev Server
 module.exports = {
   context: __dirname + '/frontend',
 
-  entry:   {
+  entry: {  // --inline --hot
     main: './main'
   },
 
-  output:  {
-    path:       path.resolve(__dirname, 'public'),
+  output: {
+    path:       __dirname + '/public',
     publicPath: '/',
     filename:   '[name].js'
   },
@@ -19,29 +19,29 @@ module.exports = {
   module: {
 
     loaders: [{
-      test:   /\.js$/,
-      include: path.resolve(__dirname, 'frontend'),
-      loader: "babel?presets[]=es2015"
+      test:    /\.js$/,
+      include: __dirname + '/frontend',
+      loader:  "babel?presets[]=es2015"
     }, {
       test:   /\.jade$/,
       loader: "jade"
     }, {
       test:   /\.styl$/,
-      loader: 'style!css!stylus?resolve url'
+      loader: ExtractTextPlugin.extract('style', 'css!stylus?resolve url')
     }, {
       test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-      loader: 'file?name=[name].[ext]?[hash]'
+      loader: 'file?name=[path][name].[ext]?[hash]'
     }]
 
   },
 
+  plugins: [
+    new ExtractTextPlugin('[name].css', {allChunks: true, disable: process.env.NODE_ENV=='development'})
+  ],
+
   devServer: {
-    host: 'localhost', // default
-    port: 8080, // default
-    proxy: [{
-      path: /.*/,
-      target: 'http://localhost:3000'
-    }]
+    contentBase: __dirname + '/backend',
+    hot: true
   }
 };
 
