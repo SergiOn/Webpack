@@ -17,8 +17,8 @@ module.exports = {
     output:  {
         path:           path.resolve(__dirname, 'public', 'assets'),
         publicPath:    '/assets/',
-        filename:      '[name].[hash].js',
-        chunkFilename: '[id].js',
+        filename:      '[name].[chunkhash].js',
+        chunkFilename: '[id].[chunkhash].js',
         library:       '[name]'
     },
 
@@ -39,7 +39,7 @@ module.exports = {
             loader: ExtractTextPlugin.extract('css!stylus?resolve url')
         }, {
             test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
-            loader: 'file?name=[path][name].[ext]'
+            loader: 'file?name=[path][name].[hash:6].[ext]'
         }]
 
     },
