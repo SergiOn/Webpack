@@ -8,7 +8,7 @@ webpackJsonp_name_([0],[
 	exports.showMenu = function () {
 
 	    __webpack_require__.e/* nsure */(1, function (require) {
-	        var Menu = __webpack_require__(1);
+	        var Menu = __webpack_require__(1).default;
 
 	        var menu = new Menu({
 	            title: "О сайте 2",

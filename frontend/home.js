@@ -3,7 +3,7 @@
 exports.showMenu = function() {
 
     require.ensure([], function(require) {
-        let Menu = require('./menu');
+        let Menu = require('./menu').default;
 
         let menu = new Menu({
             title: "Комнаты дома",
