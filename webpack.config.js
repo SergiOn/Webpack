@@ -37,7 +37,8 @@ module.exports = {
   devServer: {
 
     host: 'localhost', // default
-    port: 8080 // default
+    port: 8080, // default
+    contentBase: __dirname + '/backend',
 
   }
 };
